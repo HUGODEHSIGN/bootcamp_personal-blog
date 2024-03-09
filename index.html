@@ -6,6 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Personal Blog Form</title>
+    <link
+      rel="stylesheet"
+      href="./assets/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/styles.css" />
   </head>
   <body>
     <header>
@@ -13,8 +19,26 @@
       <button>sun icon</button>
     </header>
     <main>
-      <div>left side visual</div>
-      <div>Right side form</div>
+      <div>
+        <spline-viewer
+          url="https://prod.spline.design/oNKPLV3lflKnRlNz/scene.splinecode"></spline-viewer>
+      </div>
+
+      <div class="form-container">
+        <h2>What's on your mind?</h2>
+        <form action="submit">
+          <div><label for="">Username</label> <input type="text" /></div>
+          <div><label for="">Title</label> <input type="text" /></div>
+          <div>
+            <label for="">Content</label>
+            <textarea
+              name=""
+              id=""
+              rows="3"></textarea>
+          </div>
+          <button>Submit</button>
+        </form>
+      </div>
     </main>
     <footer>
       <p>made with love by hugo</p>
@@ -22,5 +46,8 @@
         add portfolio, blog, and email here
       </ul>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.0.62/build/spline-viewer.js"></script>
   </body>
 </html>
