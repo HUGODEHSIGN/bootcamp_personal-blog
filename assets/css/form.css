@@ -1,0 +1,31 @@
+main {
+  .form-container {
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        label {
+          padding-bottom: 4px;
+        }
+        input,
+        textarea {
+          border: var(--border-width) solid var(--light_border-color);
+          padding: var(--element-padding);
+          border-radius: var(--round);
+        }
+      }
+      button {
+        border: none;
+        padding: var(--element-padding);
+        background-color: var(--light_main);
+        border-radius: var(--round);
+        color: var(--light_bg);
+      }
+    }
+  }
+}
