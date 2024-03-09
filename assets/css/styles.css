@@ -1,6 +1,7 @@
 :root {
   --light_border-color: #cbd5e1;
   --light_main: #0f172a;
+  --light_light: #64748b;
   --light_bg: #f8fafc;
   --border-width: 2px;
   --container-padding: 48px;
@@ -51,7 +52,7 @@ main {
   height: 100%;
   padding: var(--mobile_container-padding);
   padding-bottom: 240px;
-  div {
+  section {
     width: 100%;
   }
 
@@ -118,7 +119,7 @@ footer {
 @media screen and (min-width: 768px) {
   main {
     flex-direction: row;
-    div {
+    section {
       width: 50%;
     }
 

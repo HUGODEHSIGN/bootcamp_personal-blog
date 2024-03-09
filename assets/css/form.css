@@ -12,6 +12,11 @@ main {
         label {
           padding-bottom: 4px;
         }
+        .error {
+          padding-top: 4px;
+          color: #ef4444;
+        }
+
         input,
         textarea {
           border: var(--border-width) solid var(--light_border-color);

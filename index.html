@@ -47,27 +47,52 @@
       </button>
     </header>
     <main>
-      <div class="spline">
+      <section class="spline">
         <spline-viewer
           url="https://prod.spline.design/oNKPLV3lflKnRlNz/scene.splinecode"></spline-viewer>
         <div class="logo-block"><h3>My First Blog</h3></div>
-      </div>
+      </section>
 
-      <div class="form-container">
+      <section class="form-container">
         <h2>What's on your mind?</h2>
-        <form action="submit">
-          <div><label for="">Username</label> <input type="text" /></div>
-          <div><label for="">Title</label> <input type="text" /></div>
+        <form
+          action="submit"
+          id="form">
           <div>
-            <label for="">Content</label>
+            <label for="name">Username</label>
+            <input
+              type="text"
+              id="name" />
+            <label
+              for="name"
+              class="error"
+              id="name-error"></label>
+          </div>
+          <div>
+            <label for="title">Title</label>
+            <input
+              type="text"
+              id="title" />
+            <label
+              for="title"
+              class="error"
+              id="title-error"></label>
+          </div>
+          <div>
+            <label for="content">Content</label>
             <textarea
               name=""
-              id=""
+              id="content"
               rows="3"></textarea>
+              <label
+              for="content"
+              class="error"
+              id="content-error"></label>
+          </div>
           </div>
           <button>Submit</button>
         </form>
-      </div>
+      </section>
     </main>
     <footer>
       <p>Made with ❤️ by Hugo</p>
@@ -81,5 +106,6 @@
     <script
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.0.62/build/spline-viewer.js"></script>
+    <script src="./assets/js/form.js"></script>
   </body>
 </html>
