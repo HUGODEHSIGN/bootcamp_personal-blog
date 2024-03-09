@@ -17,11 +17,22 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 24px;
   border-bottom: var(--border-width) solid var(--light_border-color);
   h1 {
     margin: 0;
     font-size: 1.6rem;
+  }
+  .theme-button {
+    background-color: var(--light_main);
+    padding: var(--element-padding);
+    border: none;
+    border-radius: var(--round);
+    height: 40px;
+    svg {
+      color: var(--light_border-color);
+    }
   }
 }
 
@@ -51,7 +62,7 @@ main {
       h3 {
         position: absolute;
         color: var(--light_bg);
-        top: -80px;
+        top: -74px;
         left: 25px;
         font-size: 3rem;
       }
