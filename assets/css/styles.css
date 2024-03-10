@@ -1,0 +1,223 @@
+/* set color and spacing variables */
+:root {
+  /* light theme variables */
+  --light_main: #0f172a;
+  --light_main-hover: #334155;
+  --light_border-color: #cbd5e1;
+  --light_gray: #64748b;
+  --light_bg: #f8fafc;
+  /* dark theme variables */
+  --dark_main: #f1f5f9;
+  --dark_main-hover: #e2e8f0;
+  --dark_border-color: #334155;
+  --dark_gray: #64748b;
+  --dark_bg: #1e293b;
+
+  /* spacing variables */
+  --border-width: 2px;
+  --container-padding: 48px;
+  --element-padding: 8px;
+  --round: 12px;
+
+  /* mobile */
+  --mobile_container-padding: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* body styles for keeping footer at the bottom of the screen, and fonts */
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* for light theme */
+body[data-theme='light'] {
+  background-color: var(--light_bg);
+  color: var(--light_main);
+  header {
+    border-bottom: var(--border-width) solid var(--light_border-color);
+
+    div {
+      button {
+        background-color: var(--light_main);
+        color: var(--light_border-color);
+        svg {
+          color: var(--light_border-color);
+        }
+        .lucide-moon {
+          display: none;
+        }
+      }
+      button:hover {
+        background-color: var(--light_main-hover);
+      }
+    }
+  }
+  main {
+    .spline {
+      .logo-block {
+        background-color: var(--light_main);
+        h3 {
+          color: var(--light_bg);
+        }
+      }
+    }
+  }
+  footer {
+    background-color: var(--light_border-color);
+  }
+}
+
+/* for dark theme */
+body[data-theme='dark'] {
+  background-color: var(--dark_bg);
+  color: var(--dark_main);
+  header {
+    border-bottom: var(--border-width) solid var(--dark_border-color);
+    div {
+      button {
+        background-color: var(--dark_main);
+        color: var(--dark_border-color);
+        svg {
+          color: var(--dark_border-color);
+        }
+        .lucide-sun {
+          display: none;
+        }
+      }
+      button:hover {
+        background-color: var(--dark_main-hover);
+      }
+    }
+  }
+  main {
+    .spline {
+      .logo-block {
+        background-color: var(--dark_main);
+        h3 {
+          color: var(--dark_bg);
+        }
+      }
+    }
+  }
+  footer {
+    background-color: var(--dark_border-color);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+
+  h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    a {
+      text-decoration: none;
+    }
+    button {
+      padding: var(--element-padding);
+      border: none;
+      border-radius: var(--round);
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+}
+
+/* rest of styles are unrelated to theme, */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100vw;
+  height: 100%;
+  padding: var(--mobile_container-padding);
+  padding-bottom: 240px;
+  section {
+    width: 100%;
+  }
+
+  .spline {
+    border-radius: var(--round);
+    overflow: hidden;
+    position: relative;
+    .logo-block {
+      height: 56px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      h3 {
+        margin-left: 20px;
+
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    h2 {
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: var(--mobile_container-padding);
+  padding-top: 8px;
+
+  p {
+    font-weight: bold;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+/* media query changes one column layout to two column for desktop */
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+    section {
+      width: 50%;
+    }
+
+    .form-container {
+      width: 50%;
+    }
+  }
+}

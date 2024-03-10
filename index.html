@@ -6,21 +6,133 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Personal Blog Form</title>
+    <link
+      rel="stylesheet"
+      href="./assets/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/form.css" />
   </head>
-  <body>
+  <body data-theme="light">
+    <!-- includes title of page, button to go to blogs page, and theme swap button -->
     <header>
       <h1>Hugo's Personal Blog</h1>
-      <button>sun icon</button>
+      <div>
+        <a href="./blog.html"><button>Blogs</button></a>
+        <!-- theme swap button -->
+      <button class="theme-button">
+        <!-- sun icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-sun">
+          <circle
+            cx="12"
+            cy="12"
+            r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <!-- moon icon -->
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-moon">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+      </button>
+    </div>
     </header>
     <main>
-      <div>left side visual</div>
-      <div>Right side form</div>
+      <!-- for 3d model -->
+      <section class="spline">
+        <spline-viewer
+          url="https://prod.spline.design/oNKPLV3lflKnRlNz/scene.splinecode"></spline-viewer>
+        <div class="logo-block"><h3>My First Blog</h3></div>
+      </section>
+
+      <!-- blog form -->
+      <section class="form-container">
+        <h2>What's on your mind?</h2>
+        <form
+          action="submit"
+          id="form">
+          <!-- username field -->
+          <div>
+            <label for="name">Username</label>
+            <input
+              type="text"
+              id="name" />
+            <label
+              for="name"
+              class="error"
+              id="name-error"></label>
+          </div>
+          <!-- title field -->
+          <div>
+            <label for="title">Title</label>
+            <input
+              type="text"
+              id="title" />
+            <label
+              for="title"
+              class="error"
+              id="title-error"></label>
+          </div>
+          <!-- content text area -->
+          <div>
+            <label for="content">Content</label>
+            <textarea
+              name=""
+              id="content"
+              rows="3"></textarea>
+              <label
+              for="content"
+              class="error"
+              id="content-error"></label>
+          </div>
+          </div>
+          <button>Submit</button>
+        </form>
+      </section>
     </main>
     <footer>
-      <p>made with love by hugo</p>
+      <p>Made with ❤️ by Hugo</p>
       <ul>
-        add portfolio, blog, and email here
+        <!-- add portfolio, blog, and email here -->
+        <li>Portfolio: <a href="https://hugodehsign.github.io/advanced-css-portfolio/">Hugo's Portfolio</a></li>
+        <li>Blog: Here!</li>
+        <li>Email: hhsi@hugodehsign.com</li>
       </ul>
     </footer>
+    <!-- for 3d model -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.0.62/build/spline-viewer.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/logic.js"></script>
   </body>
 </html>

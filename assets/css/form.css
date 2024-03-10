@@ -1,0 +1,85 @@
+/* for light theme */
+body[data-theme='light'] {
+  main {
+    .form-container {
+      form {
+        div {
+          input,
+          textarea {
+            border: var(--border-width) solid var(--light_border-color);
+            background-color: var(--light_bg);
+            color: var(--light_main);
+          }
+        }
+        button {
+          background-color: var(--light_main);
+          color: var(--light_bg);
+        }
+        button:hover {
+          background-color: var(--light_main-hover);
+        }
+      }
+    }
+  }
+}
+
+/* for dark theme */
+body[data-theme='dark'] {
+  main {
+    .form-container {
+      form {
+        div {
+          input,
+          textarea {
+            border: var(--border-width) solid var(--dark_border-color);
+            background-color: var(--dark_bg);
+            color: var(--dark_main);
+          }
+        }
+        button {
+          background-color: var(--dark_main);
+          color: var(--dark_bg);
+        }
+        button:hover {
+          background-color: var(--dark_main-hover);
+        }
+      }
+    }
+  }
+}
+
+/* rest of styles are for layout and spacing, unrelated to theme */
+main {
+  .form-container {
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        label {
+          padding-bottom: 4px;
+        }
+        .error {
+          padding-top: 4px;
+          color: #ef4444;
+        }
+
+        input,
+        textarea {
+          padding: var(--element-padding);
+          border-radius: var(--round);
+        }
+      }
+      button {
+        border: none;
+        padding: var(--element-padding);
+        cursor: pointer;
+        border-radius: var(--round);
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+/* for light theme */
+body[data-theme='light'] {
+  main {
+    .blog-container {
+      div {
+        border: 2px solid var(--light_border-color);
+        h3 {
+          border-bottom: 2px solid var(--light_border-color);
+        }
+        div {
+          border: none;
+          p {
+            color: var(--light_gray);
+          }
+
+          p:first-child {
+            color: var(--light_main);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* for dark theme */
+body[data-theme='dark'] {
+  main {
+    .blog-container {
+      div {
+        border: 2px solid var(--dark_border-color);
+        h3 {
+          border-bottom: 2px solid var(--dark_border-color);
+        }
+        div {
+          border: none;
+          p {
+            color: var(--dark_gray);
+          }
+
+          p:first-child {
+            color: var(--dark_main);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* rest of styles is for layout and spacing, unrelated to theme */
+.blog-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  div {
+    padding: var(--mobile_container-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: var(--round);
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      padding: 0;
+      border: none;
+      min-height: 96px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      p:first-child {
+        padding-left: 12px;
+      }
+    }
+  }
+}
