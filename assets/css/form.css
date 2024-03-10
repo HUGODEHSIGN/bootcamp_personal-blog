@@ -1,3 +1,4 @@
+/* for light theme */
 body[data-theme='light'] {
   main {
     .form-container {
@@ -22,6 +23,7 @@ body[data-theme='light'] {
   }
 }
 
+/* for dark theme */
 body[data-theme='dark'] {
   main {
     .form-container {
@@ -46,6 +48,7 @@ body[data-theme='dark'] {
   }
 }
 
+/* rest of styles are for layout and spacing, unrelated to theme */
 main {
   .form-container {
     form {

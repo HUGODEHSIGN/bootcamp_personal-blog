@@ -17,11 +17,14 @@
       href="./assets/css/form.css" />
   </head>
   <body data-theme="light">
+    <!-- includes title of page, button to go to blogs page, and theme swap button -->
     <header>
       <h1>Hugo's Personal Blog</h1>
       <div>
         <a href="./blog.html"><button>Blogs</button></a>
+        <!-- theme swap button -->
       <button class="theme-button">
+        <!-- sun icon -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -46,6 +49,7 @@
           <path d="m6.34 17.66-1.41 1.41" />
           <path d="m19.07 4.93-1.41 1.41" />
         </svg>
+        <!-- moon icon -->
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -63,17 +67,20 @@
     </div>
     </header>
     <main>
+      <!-- for 3d model -->
       <section class="spline">
         <spline-viewer
           url="https://prod.spline.design/oNKPLV3lflKnRlNz/scene.splinecode"></spline-viewer>
         <div class="logo-block"><h3>My First Blog</h3></div>
       </section>
 
+      <!-- blog form -->
       <section class="form-container">
         <h2>What's on your mind?</h2>
         <form
           action="submit"
           id="form">
+          <!-- username field -->
           <div>
             <label for="name">Username</label>
             <input
@@ -84,6 +91,7 @@
               class="error"
               id="name-error"></label>
           </div>
+          <!-- title field -->
           <div>
             <label for="title">Title</label>
             <input
@@ -94,6 +102,7 @@
               class="error"
               id="title-error"></label>
           </div>
+          <!-- content text area -->
           <div>
             <label for="content">Content</label>
             <textarea
@@ -119,6 +128,7 @@
         <li>Email: hhsi@hugodehsign.com</li>
       </ul>
     </footer>
+    <!-- for 3d model -->
     <script
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.0.62/build/spline-viewer.js"></script>
