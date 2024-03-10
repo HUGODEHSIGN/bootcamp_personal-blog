@@ -17,7 +17,6 @@ const formInputs = [
 let blogs = [];
 
 function init() {
-  //   userName.addEventListener('keyup', () => validateEntry(userName, nameError));
   formInputs.forEach(({ input, error, display }) => {
     input.addEventListener('keyup', () => validateEntry(input, error, display));
   });
@@ -34,6 +33,11 @@ function saveLocalStorage(data) {
 
 function submitForm(e) {
   e.preventDefault();
+
+  formInputs.forEach(({ input, error, display }) => {
+    validateEntry(input, error, display);
+  });
+
   if (!validated) {
     return;
   }

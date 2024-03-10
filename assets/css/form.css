@@ -1,3 +1,51 @@
+body[data-theme='light'] {
+  main {
+    .form-container {
+      form {
+        div {
+          input,
+          textarea {
+            border: var(--border-width) solid var(--light_border-color);
+            background-color: var(--light_bg);
+            color: var(--light_main);
+          }
+        }
+        button {
+          background-color: var(--light_main);
+          color: var(--light_bg);
+        }
+        button:hover {
+          background-color: var(--light_main-hover);
+        }
+      }
+    }
+  }
+}
+
+body[data-theme='dark'] {
+  main {
+    .form-container {
+      form {
+        div {
+          input,
+          textarea {
+            border: var(--border-width) solid var(--dark_border-color);
+            background-color: var(--dark_bg);
+            color: var(--dark_main);
+          }
+        }
+        button {
+          background-color: var(--dark_main);
+          color: var(--dark_bg);
+        }
+        button:hover {
+          background-color: var(--dark_main-hover);
+        }
+      }
+    }
+  }
+}
+
 main {
   .form-container {
     form {
@@ -19,7 +67,6 @@ main {
 
         input,
         textarea {
-          border: var(--border-width) solid var(--light_border-color);
           padding: var(--element-padding);
           border-radius: var(--round);
         }
@@ -27,9 +74,8 @@ main {
       button {
         border: none;
         padding: var(--element-padding);
-        background-color: var(--light_main);
+        cursor: pointer;
         border-radius: var(--round);
-        color: var(--light_bg);
       }
     }
   }
