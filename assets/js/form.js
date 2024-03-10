@@ -41,6 +41,7 @@ function submitForm(e) {
   if (!validated) {
     return;
   }
+
   const newBlog = {
     userName: userName.value,
     title: title.value,
@@ -48,6 +49,7 @@ function submitForm(e) {
   };
   blogs.push(newBlog);
   saveLocalStorage(blogs);
+  location.href = './blog.html';
 }
 
 function validateEntry(input, error, display) {
